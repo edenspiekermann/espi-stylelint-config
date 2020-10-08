@@ -1,6 +1,6 @@
 # Edenspiekermann STYLELINT Configuration
 
-This repository contains the ESLINT configuration for projects at [Edenspiekermann](https://www.edenspiekermann.com/).
+This repository contains the STYLELINT configuration for projects at [Edenspiekermann](https://www.edenspiekermann.com/).
 
 ## Installation
 

@@ -1,24 +1,31 @@
 {
-    "name": "@edenspiekermann/stylelint-config",
-    "version": "1.0.0",
-    "description": "A shareable stylelint config for ESPI projects",
-    "main": "index.js",
-    "scripts": {
-      "release": "release-it"
-    },
-    "repository": {
-      "url": "https://github.com/edenspiekermann/espi-stylelint-config",
-      "type": "git"
-    },
-    "author": "Edenspiekermann",
-    "license": "MIT",
-    "devDependencies": {
-      "babel-eslint": "^10.0.3",
-      "eslint": "^6.5.1",
-      "release-it": "^12.4.3"
-    },
-    "dependencies": {
-      "stylelint": "^11.0.0",
-      "stylelint-config-standard": "^19.0.0"
+  "name": "@edenspiekermann/stylelint-config",
+  "version": "1.0.0",
+  "description": "A shareable stylelint config for ESPI projects",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --fix index.js",
+    "release": "np"
+  },
+  "repository": {
+    "url": "https://github.com/edenspiekermann/espi-stylelint-config",
+    "type": "git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run test"
     }
+  },
+  "author": "Edenspiekermann",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1"
+  },
+  "dependencies": {
+    "np": "^6.5.0",
+    "stylelint": "^11.0.0",
+    "stylelint-config-standard": "^19.0.0"
   }
+}
