@@ -6,7 +6,6 @@
   "keywords": [
     "stylelint",
     "stylelint config",
-    "prettier",
     "linting",
     "tailwind",
     "styled components"
@@ -21,26 +20,32 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn run test"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.js,!__fixtures/**/*.js": [
+      "eslint --fix"
+    ]
   },
   "author": "Edenspiekermann",
   "license": "MIT",
+  "dependencies": {
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-processor-styled-components": "^1.10.0",
+    "stylelint-scss": "^3.18.0"
+  },
   "devDependencies": {
+    "@edenspiekermann/eslint-config": "^1.0.1",
     "eslint": "^7.10.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
     "np": "^6.5.0",
     "yarn": "^1.22.10"
   },
   "peerDependencies": {
-    "stylelint": "^13.7.2",
-    "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-config-recommended": "^3.0.0",
-    "stylelint-config-sass-guidelines": "^7.1.0",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-config-styled-components": "^0.1.1",
-    "stylelint-processor-styled-components": "^1.10.0",
-    "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.18.0"
+    "stylelint": "^13.7.2"
   }
 }
