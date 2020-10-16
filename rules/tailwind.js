@@ -1,8 +1,8 @@
 module.exports = {
   extends: [
     '@edenspiekermann/stylelint-config',
-    '@edenspiekermann/stylelint-config/sass',
-    '@edenspiekermann/stylelint-config/tailwind',
+    '@edenspiekermann/stylelint-config/rules/sass',
+    '@edenspiekermann/stylelint-config/rules/tailwind',
   ],
   plugins: [
     'stylelint-scss',

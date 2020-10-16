@@ -5,8 +5,8 @@ module.exports = {
   ],
   extends: [
     '@edenspiekermann/stylelint-config',
-    '@edenspiekermann/stylelint-config/sass',
-    '@edenspiekermann/stylelint-config/styled-components',
+    '@edenspiekermann/stylelint-config/rules/sass',
+    '@edenspiekermann/stylelint-config/rules/styled-components',
   ],
   plugins: ['stylelint-order', 'stylelint-config-rational-order/plugin'],
   rules: {
