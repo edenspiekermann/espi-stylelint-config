@@ -25,8 +25,8 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/block-closing-brace-empty-line-before
     'block-closing-brace-empty-line-before': null,
 
-    // There must always be an empty line before at-rules.
-    // https://stylelint.io/user-guide/rules/at-rule-empty-line-before
+    // There must always be an empty line before rules.
+    // https://stylelint.io/user-guide/rules/rule-empty-line-before
     'rule-empty-line-before': 'always',
 
     // Require or disallow an empty line before declarations.
@@ -47,13 +47,21 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/font-family-name-quotes
     'font-family-name-quotes': 'always-where-recommended',
 
-    // Require (where possible) or disallow named colors.
+    // Colors must never be named.
     // https://stylelint.io/user-guide/rules/color-named
-    'color-named': 'always-where-possible',
+    'color-named': 'never',
+
+    // Specify lowercase or uppercase for hex colors.
+    // https://stylelint.io/user-guide/rules/color-hex-case
+    'color-hex-case': 'lower',
 
     // Require or disallow an empty line before comments.
     // https://stylelint.io/user-guide/rules/comment-empty-line-before
     'comment-empty-line-before': null,
+
+    // Specify short or long notation for hex colors.
+    // https://stylelint.io/user-guide/rules/color-hex-length
+    'color-hex-length': 'long',
 
     // There must always be whitespace inside the markers.
     // https://stylelint.io/user-guide/rules/comment-whitespace-inside
@@ -62,6 +70,10 @@ module.exports = {
     // Urls must always be quoted.
     // https://stylelint.io/user-guide/rules/function-url-quotes
     'function-url-quotes': 'always',
+
+    // Require a single space or disallow whitespace on the inside of the parentheses of functions.
+    // https://stylelint.io/user-guide/rules/function-parentheses-space-inside
+    'function-parentheses-space-inside': 'never',
 
     // Strings must always be wrapped with single quotes.
     // https://stylelint.io/user-guide/rules/string-quotes
@@ -73,7 +85,7 @@ module.exports = {
 
     // Limit the number of decimal places allowed in numbers.
     // https://stylelint.io/user-guide/rules/number-max-precision
-    'number-max-precision': 2,
+    'number-max-precision': 3,
 
     // Disallow trailing zeros in numbers.
     // https://stylelint.io/user-guide/rules/number-no-trailing-zeros
@@ -81,7 +93,7 @@ module.exports = {
 
     // Require or disallow a leading zero for fractional numbers less than 1.
     // https://stylelint.io/user-guide/rules/number-leading-zero
-    'number-leading-zero': 'never',
+    'number-leading-zero': 'always',
 
     // Disallow redundant values in shorthand properties. (e.g. margin / padding)
     // https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values
@@ -93,7 +105,7 @@ module.exports = {
 
     // Require a newline or disallow whitespace after the commas of selector lists.
     // https://stylelint.io/user-guide/rules/selector-list-comma-newline-after
-    'selector-list-comma-newline-after': null,
+    'selector-list-comma-newline-after': 'always-multi-line',
 
     // Limit the number of ID selectors in a selector
     // https://stylelint.io/user-guide/rules/selector-max-id
@@ -101,7 +113,7 @@ module.exports = {
 
     // Limit the number of universal selectors in a selector.
     // https://stylelint.io/user-guide/rules/selector-max-universal
-    'selector-max-universal': 0,
+    'selector-max-universal': 1,
 
     // Disallow vendor prefixes for selectors.
     // https://stylelint.io/user-guide/rules/selector-no-vendor-prefix
@@ -114,6 +126,10 @@ module.exports = {
     // Specify lowercase or uppercase for media feature names.
     // https://stylelint.io/user-guide/rules/media-feature-name-case
     'media-feature-name-case': 'lower',
+
+    // Limit the depth of nesting.
+    // https://stylelint.io/user-guide/rules/max-nesting-depth
+    'max-nesting-depth': 3,
 
     // Specify lowercase or uppercase for keywords values.
     // https://stylelint.io/user-guide/rules/value-keyword-case
