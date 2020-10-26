@@ -70,7 +70,7 @@ Add this configuration if you want to use stylelint with the rules of [tailwind]
 {
   "extends": [
     "@edenspiekermann/stylelint-config",
-    "@edenspiekermann/stylelint-config/rules/styled-components"
+    "@edenspiekermann/stylelint-config/rules/tailwind"
   ]
 }
 ```
