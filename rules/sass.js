@@ -1,7 +1,4 @@
 module.exports = {
-  extends: [
-    '@edenspiekermann/stylelint-config/rules/sass',
-  ],
   plugins: ['stylelint-scss'],
   rules: {
     // Specify blacklist of disallowed file extensions for partial names in @import commands.
