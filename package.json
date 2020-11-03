@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "A shareable stylelint config for ESPI projects",
   "main": "index.js",
+  "engines": {
+    "node": ">=10"
+  },
   "keywords": [
     "stylelint",
     "stylelint config",
