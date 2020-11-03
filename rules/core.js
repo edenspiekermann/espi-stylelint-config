@@ -21,6 +21,16 @@ module.exports = {
     // https://www.npmjs.com/package/stylelint-config-rational-order
     'plugin/rational-order': true,
 
+    // Require or disallow an empty line before at-rules.
+    // https://stylelint.io/user-guide/rules/at-rule-empty-line-before
+    'at-rule-empty-line-before': ['always', {
+      ignore: [
+        'after-comment',
+        'first-nested',
+        'blockless-after-same-name-blockless',
+      ],
+    }],
+
     // Require or disallow an empty line before the closing brace of blocks.
     // https://stylelint.io/user-guide/rules/block-closing-brace-empty-line-before
     'block-closing-brace-empty-line-before': null,
