@@ -1,0 +1,47 @@
+# This workflow will do a clean install of node dependencies and run tests and
+# validations. This will use the pinned version inside the .nvmrc file
+# for the node installation.
+#
+# Required secrets:
+# ------------------------------------------------------------------------------
+# (none)
+
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - master
+      - develop
+      - feature/*
+      - feat/*
+
+jobs:
+  tests:
+    name: Validations
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+
+      - name: Read .nvmrc
+        id: nvm
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+
+      - name: Use Node.js ${{ steps.nvm.outputs.NVMRC }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run validations
+        run: yarn lint
+        env:
+          CI: true
