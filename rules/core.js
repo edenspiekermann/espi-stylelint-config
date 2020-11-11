@@ -35,9 +35,13 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/block-closing-brace-empty-line-before
     'block-closing-brace-empty-line-before': null,
 
-    // There must always be an empty line before rules.
+    // There must always be an empty line before rules, except on first nested.
     // https://stylelint.io/user-guide/rules/rule-empty-line-before
-    'rule-empty-line-before': 'always',
+    'rule-empty-line-before': ['always', {
+      except: [
+        'first-nested',
+      ],
+    }],
 
     // Require or disallow an empty line before declarations.
     // https://stylelint.io/user-guide/rules/declaration-empty-line-before
