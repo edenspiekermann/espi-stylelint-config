@@ -1,6 +1,6 @@
 module.exports = {
   rules: {
-    // Disallow unknown at-rules.
+    // Disallow unknown at-rules in favour of scss/at-rule-no-unknown.
     // https://stylelint.io/user-guide/rules/at-rule-no-unknown
     'at-rule-no-unknown': null,
 
@@ -15,10 +15,6 @@ module.exports = {
           'responsive',
           'variants',
           'screen',
-          'extend',
-          'include',
-          'mixin',
-          'function',
         ],
       },
     ],
