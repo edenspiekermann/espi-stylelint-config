@@ -5,6 +5,11 @@ module.exports = {
     // https://stylelint.io/user-guide/rules/at-rule-no-unknown
     'at-rule-no-unknown': null,
 
+    // Colors must never be named.
+    // Ignore colors that are inside a function.
+    // https://stylelint.io/user-guide/rules/color-named
+    'color-named': ['never', { ignore: ['inside-function'] }],
+
     // Disallow unknown at-rules in sass files.
     // https://github.com/kristerkari/stylelint-scss/tree/master/src/rules/at-rule-no-unknown
     'scss/at-rule-no-unknown': true,
