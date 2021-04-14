@@ -14,8 +14,9 @@
     "styled components"
   ],
   "scripts": {
+    "prepare": "npx husky install",
     "lint": "eslint . --ext .js",
-    "release": "np"
+    "release": "HUSKY_SKIP_HOOKS=1 np"
   },
   "repository": {
     "url": "https://github.com/edenspiekermann/espi-stylelint-config",

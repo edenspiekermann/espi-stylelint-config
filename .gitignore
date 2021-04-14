@@ -37,3 +37,6 @@ jsconfig.json
 
 # OSX Files
 .DS_Store
+
+# Husky
+.husky/
